@@ -1,0 +1,273 @@
+/**
+ * Venture Native Ad Management - Admin Styles
+ * Version: 0.9.1
+ */
+
+:root {
+    --venture-orange: #F4A239;
+    --venture-green: #D1D741;
+}
+
+/* ====================== MODALS ====================== */
+.venture-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ccc;
+    z-index: 10000;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    max-width: 90vw;
+    box-sizing: border-box;
+}
+
+.venture-client-modal {
+    width: 400px;
+}
+
+.venture-ad-modal {
+    width: 620px;
+}
+
+.venture-campaign-modal {
+    width: 420px;
+}
+
+/* ====================== CAMPAIGN DRAG & DROP ====================== */
+.venture-campaign-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.venture-column {
+    flex: 1;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.venture-column h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid var(--venture-orange);
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.venture-available {
+    border-color: #ddd;
+}
+
+.venture-campaign {
+    border-color: var(--venture-orange);
+    background: #fffdf5;
+}
+
+.venture-sortable {
+    min-height: 420px !important;
+}
+
+.venture-ad-card {
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.venture-ad-card:hover {
+    border-color: var(--venture-orange);
+    box-shadow: 0 4px 12px rgba(244, 162, 57, 0.2);
+    transform: translateY(-2px);
+}
+
+.venture-ad-card img {
+    max-height: 60px;
+    width: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid #eee;
+}
+
+.venture-ad-card strong {
+    flex: 1;
+    font-size: 15px;
+    color: #222;
+}
+
+.venture-ad-card small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Drag states */
+.venture-ad-card.dragging,
+.ui-sortable-helper {
+    transition: none !important;
+    opacity: 0.92;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+}
+
+.ui-sortable-placeholder {
+    background: #f0f0f0 !important;
+    border: 2px dashed var(--venture-orange) !important;
+    height: 78px !important;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.venture-campaign .venture-ad-card {
+    border-color: var(--venture-orange);
+}
+
+.ui-sortable-helper {
+    z-index: 99999 !important;
+}
+
+/* ====================== ANALYTICS DISPLAY ====================== */
+.venture-analytics-wrapper {
+    margin-bottom: 60px;
+}
+
+.venture-ad-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.venture-ad-info {
+    min-width: 280px;
+}
+
+.venture-ad-title-main {
+    color: var(--venture-orange);
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.venture-ad-container {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.venture-ad-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.venture-ad-title {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    color: #222;
+    font-weight: 600;
+}
+
+.venture-ad-href {
+    color: var(--venture-orange);
+    text-decoration: none;
+    font-size: 13px;
+    word-break: break-all;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.venture-ad-href:hover {
+    text-decoration: underline;
+}
+
+/* Charts */
+.venture-chart-title {
+    color: #444;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--venture-orange);
+    display: inline-block;
+    font-weight: 600;
+}
+
+.venture-chart-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 25px;
+}
+
+.venture-chart-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.venture-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.venture-analytics-wrapper .venture-ad-info,
+.venture-analytics-wrapper .venture-ad-container,
+.venture-analytics-wrapper .venture-ad-img,
+.venture-analytics-wrapper .venture-ad-href {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+.venture-analytics-wrapper .venture-charts {
+    pointer-events: auto;
+}
+
+/* ====================== GENERAL ADMIN UI TWEAKS ====================== */
+#venture-clients-table td,
+#venture-ads-table td {
+    vertical-align: middle;
+}
+
+.venture-ad-card {
+    user-select: none;
+}
+
+/* Responsive for campaign columns on smaller screens */
+@media (max-width: 1024px) {
+    .venture-campaign-container {
+        flex-direction: column;
+    }
+    .venture-column {
+        min-height: auto;
+    }
+
+    /* Analytics blocks stack on smaller screens */
+    .venture-ad-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

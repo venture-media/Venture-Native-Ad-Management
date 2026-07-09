@@ -990,19 +990,19 @@ class Venture_Native_Ad_Management {
 
                 <!-- Right column: Three charts -->
                 <div class="venture-charts">
-                    <div>
+                    <div class="venture-charts-impressions">
                         <h5 class="venture-chart-title">Total impressions</h5>
                         <div class="venture-chart-wrapper">
                             <canvas id="camp-imp-<?php echo esc_attr($campaign_id); ?>" class="venture-chart"></canvas>
                         </div>
                     </div>
-                    <div>
+                    <div class="venture-charts-clicks">
                         <h5 class="venture-chart-title">Total clicks</h5>
                         <div class="venture-chart-wrapper">
                             <canvas id="camp-clk-<?php echo esc_attr($campaign_id); ?>" class="venture-chart"></canvas>
                         </div>
                     </div>
-                    <div>
+                    <div class="venture-charts-advertisements">
                         <h5 class="venture-chart-title">Total advertisements</h5>
                         <div class="venture-chart-wrapper">
                             <canvas id="camp-ads-<?php echo esc_attr($campaign_id); ?>" class="venture-chart"></canvas>

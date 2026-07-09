@@ -3,7 +3,7 @@
  * Plugin Name:       Venture Native Ad Management
  * Plugin URI:        https://github.com/venture-media/Venture-Native-Ad-Management
  * Description:       Host plugin for managing clients, advertisements, campaigns, analytics, and serving native ads to internal client sites.
- * Version:           0.9.1
+ * Version:           0.9.2
  * Author:            Leon de Klerk
  * Author URI:        https://github.com/Leon2332
  * License:           MIT
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) exit;
 class Venture_Native_Ad_Management {
 
     private static $instance = null;
-    public $version = '0.9.1';
+    public $version = '0.9.2';
     private $secret_key_option = 'venture_native_secret_key';
 
     public static function get_instance() {
